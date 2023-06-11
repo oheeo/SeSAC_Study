@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Review</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div id="container">
+
+        <header>                <!--헤더-->
+            <div id="logo">     <!--로고-->
+                <a href="index.html">
+                    <h1>Movie Review</h1>
+                </a>
+            </div>
+            <nav>               <!--네비게이션-->
+                <ul id="topMenu">
+                    <li><a href="#">영화 예매 <span>▼</span></a>
+                        <ul>
+                            <li><a href="http://www.cgv.co.kr/ticket/" target="_blank">영화 예매</a></li>
+                            <li><a href="#">예매 내역</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">영화 추천 <span>▼</span></a>
+                        <ul>
+                            <li><a href="#">SF</a></li>
+                            <li><a href="#">액션</a></li>
+                            <li><a href="#">범죄</a></li>
+                            <li><a href="#">스릴러</a></li>
+                            <li><a href="#">코미디</a></li>
+                            <li><a href="#">로맨스</a></li>
+                            <li><a href="#">판타지</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">영화 리뷰 <span>▼</span></a>
+                        <ul>
+                            <li><a href="https://www.boxofficemojo.com/brand/?ref_=bo_nb_hm_tab" target="_blank">Best 리뷰</a></li>
+                            <li><a href="https://www.boxofficemojo.com/date/?ref_=bo_nb_rs_tab" target="_blank">오늘의 리뷰</a></li>
+                            <li><a href="#">리뷰 작성</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">문의하기</a>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="slideShow">    <!--이미지슬라이드쇼-->
+            <div id="slides">
+                <img src="Images/photo-1.jpg" alt="">
+                <img src="Images/photo-2.jpg" alt="">
+                <img src="Images/photo-3.jpg" alt="">
+                <img src="Images/photo-4.jpg" alt="">
+                <button id="prev">&lang;</button>
+                <button id="next">&rang;</button>
+            </div>
+        </div>
+
+        <div id="contents">     <!--컨텐츠-->
+            <div id="tabMenu">  <!--탭 메뉴-->
+                <input type="radio" id="tab1" name="tabs" checked>
+                <label for="tab1">NEW</label>
+                <input type="radio" id="tab2" name="tabs">
+                <label for="tab2">EVENT</label>
+
+                <div id="notice" class="tabContent">
+                    <h2>공지사항 내용입니다.</h2>
+                    <ul>
+                        <li>오늘의 영화 추천입니다.</li>
+                        <li>[테스트] 나의 영화 취향은? </li>
+                        <li>공지사항 입니다.</li>
+                    </ul>
+                </div>    
+                <div id="gallery" class="tabContent">
+                    <h2>갤러리 내용입니다.</h2>
+                    <ul>
+                        <li>리뷰 이벤트 당첨자 확인</li>
+                        <li>[광고] 영화 예매하고 팝콘 받기</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="links">    <!--퀵 링크-->
+                <ul>
+                    <li>
+                        <a href="https://ko.wikipedia.org/wiki/%EB%B6%84%EB%A5%98:%EC%9E%A5%EB%A5%B4%EB%B3%84_%EC%98%81%ED%99%94" target="_blank">
+                            <span id="quick-icon1"></span>
+                            <p>장르</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span id="quick-icon2"></span>
+                            <p>감독</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://namu.wiki/w/%EB%B6%84%EB%A5%98:%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%EC%9D%98%20%EC%98%81%ED%99%94%20%EB%B0%B0%EC%9A%B0" target="_blank">
+                            <span id="quick-icon3"></span>
+                            <p>배우</p>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <footer>                <!--푸터-->
+            <div id="bottomMenu">
+                <ul>
+                    <li><a href="#">회사 소개</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">여행약관</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                </ul>
+                <div id="sns">
+                    <ul>
+                        <li><a href="#"><img src="Images/sns-1.png"></a></li>
+                        <li><a href="#"><img src="Images/sns-2.png"></a></li>
+                        <li><a href="#"><img src="Images/sns-3.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="company">
+                <p>[영화진흥위원회] 부산광역시 해운대구 수영강변대로 130</p>
+            </div>
+        </footer>
+    </div>
+<script src="JS/autoslideshow.js"></script>
+</body>
+</html>

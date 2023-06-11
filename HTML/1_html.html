@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML TEXT Basic Page</title>
+</head>
+
+<body>
+    <nav>
+        <ol>
+            <li>원</li>
+            <li>투</li>
+            <li>쓰리</li>
+        </ol>
+    </nav>
+    <main>
+        <h1><b>hello</b></h1>
+        <h1><i>hello</i></h1>
+        <h1><small>helllo</small></h1>
+        <h1><sub>hello</sub></h1>
+        <h1><sup>hello</sup></h1>
+        <h1><ins>hello</ins></h1>
+        <h1><del>hello</del></h1>
+
+        <h1>Lorem ipsum</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, eum cumque ipsa, accusamus autem veniam
+            <hr>eveniet debitis dolorum nemo porro saepe, vel quis fugiat ad. Veritatis repellat eaque ab veniam.
+        </p>
+        <p>Nam commodo mi a lorem congue id rutrum leo venenatis.</p>
+
+        <img src="https://th-thumbnailer.cdn-si-edu.com/Qy_hr0K77tBZ3GhWXLHiWAknoSM=/1072x720/filters:no_upscale()/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/43/0c/430ce021-3089-415f-bb2d-340465beed4e/2204449610_6a0aa9d569_o.jpg"
+            alt="snowman">
+
+        <table border="1">
+            <thead>
+                <tr style="color: blue">
+                    <th>주제1</th>
+                    <th>주제2</th>
+                    <th colspan="2">주제3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>강아지</td>
+                    <td>고양이</td>
+                    <td>다람쥐</td>
+                    <td rowspan="2" style="background-color: pink">오리</td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="background-color: pink">새</td>
+                    <td>마</td>
+                </tr>
+                <tr>
+                    <td>강아지</td>
+                    <td>고양이</td>
+                    <td>다람쥐</td>
+                    <td>오리</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>
+        <form action="/login">
+            <div>
+                <lable for="username">아이디:</lable>
+                <input id="username" type="text" placeholder="입력하시오" name="id">
+            </div>
+            <div>
+                <lable for="userPW">비밀번호:</lable>
+                <input id="userPW" type="password" name="PW">
+                <input type="submit" value="로그인~">
+                <button>로그인</button>
+            </div>
+        </form>
+        </p>
+        <!-- action: 입력 받은 것을 여기로 보냄
+lable: 입력 받은 것을 lable로 그룹핑
+고유 id값으로 묶어야 lable과 input 태그가 연결
+placeholder: 입력란에 떠있는 글자
+<input type="submit" value="로그인~"> 보다는 <button>로그인</button> -->
+
+        <p>
+        <form action="/결과"> <!--제출 후 주소창 URL 봐-->
+            <div>
+                <input type="radio" id="치킨" name="food" value="치킨">
+                <lable for="치킨">치킨 먹자</lable>
+            </div>
+            <div>
+                <input type="radio" id="피자" name="food" value="피자">
+                <lable for="피자">피자 먹자</lable>
+            </div>
+            <button>제출</button>
+        </form>
+        </p>
+        <!-- name: 같은 name끼리 하나의 그룹으로 묶음 (그래야 중복 선택 안돼)
+value: 제출했을때 서버에 전송되는 값 (입력값이 어떤건지 설명해주는) -->
+
+        <p>
+            <lable for="animal-select">골라봐</lable>
+            <br>
+            <select name="animal" id="animal-select">
+                <option value="">동물을 고르시오</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="bird">Bird</option>
+            </select>
+        </p>
+
+        <p>
+            <lable for="QnA">문의 사항</lable>
+            <br>
+            <textarea id="QnA" rows="10" cols="30" name="request?"></textarea>
+            <button>제출</button>
+        </p>
+
+
+        <h1>Race Registration!</h1>
+        <form action="">
+            <div>
+            <lable for="first">First Name</lable>
+            <input type="text" id="first" name="firstname" required>
+            <lable for="last">Last Name</lable>
+            <input type="text" id="last" name="lasttname" required>
+        </div>
+        <p>Select a Race:</p>
+        <div>
+            <input type="radio" id="5k" name="race">
+            <lable for="5k">Fun Run 5k</lable>
+            <br>
+            <input type="radio" id="half" name="race">
+            <lable for="half">Half Marathon</lable>
+            <br>
+            <input type="radio" id="full" name="race">
+            <lable for="full">Full Marathon</lable>
+        </div>
+        <div>
+            <lable for="email">Email</lable>
+            <input type="text" id="email" name="useremail">
+            <lable for="password">Password</lable>
+            <input type="password" id="password" name="userpassword">
+            </div>
+        <div>
+            <lable for="select-age">Select Age Group:</lable>
+            <select id="select-age" name="age">
+                <option value="under18">under 18</option>
+                <option value="18-30">18~30</option>
+                <option value="30-50">30~50</option>
+                <option value="upper50">50+</option>
+            </select>
+            </div>
+        <button>Register!</button>
+    </form>
+
+
+    </main>
+</body>
+
+</html>

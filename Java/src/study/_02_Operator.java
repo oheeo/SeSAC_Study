@@ -116,12 +116,12 @@ public class _02_Operator {
         for (int i=1; i<=9; i=i+3) {
             for (int j=1; j<=9; j++) {
                 for (int k=i; k<i+3 && k<10; k++) {
-                    System.out.print(k + "*" + j  + "=" + (j*k)+"\t");
-                    System.out.print("<-k값"+ "*" +"j값"+"\t"+"\t");
+                    System.out.print(k + "X" + j  + "=" + (j*k)+"\t");
                 }
                 System.out.println();
             }
             System.out.println();
         }
+
     }
 }

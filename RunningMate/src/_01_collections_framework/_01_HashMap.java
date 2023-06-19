@@ -1,13 +1,15 @@
 package _01_collections_framework;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;  // 빨갛게 오류나는 거에 커서 놓고 alt + enter 누르면 자동으로 패키지 추가됨
+import java.util.Set;
 
 public class _01_HashMap {
 
     public static void main(String[] args) {
         HashMap<Integer, String> hm1 = new HashMap<Integer, String>();
 
-        // 요소의 저장
+        // 요소의 저장 put(K key, V value)
         hm1.put(3, "three");
         hm1.put(1, "one");
         hm1.put(2, "two");

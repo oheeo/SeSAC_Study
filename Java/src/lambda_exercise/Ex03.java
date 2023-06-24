@@ -1,10 +1,10 @@
 package lambda_exercise;
 // 익명 이너 클래스 객체 생성 코드 -> 람다식
 
-interface A {
+interface A3 {
     double abc(int k);
 }
-class B {
+class B1 {
     double bcd(int k) {
         return k * 0.1;
     }
@@ -12,17 +12,23 @@ class B {
 
 public class Ex03 {
 
-    A a = new A() {
-        @Override
-        public double abc(int k) {
-//            B b = new B();
-//            return b.bcd(k);
+    public static void main(String[] args) {
 
-            B b = new B();
-            A a = b::bcd;
+//        A3 a = new A3() {
+//            @Override
+//            public double abc(int k) {
+//                B1 b = new B1();
+//                return b.bcd(k);
+//            }
+//        };
+//        System.out.println(a.abc(10));  // 1.0
 
-        }
+        A3 a = (k) -> {
+            B1 b = new B1();
+            return b.bcd(k);
+        };
+        System.out.println(a.abc(10));  // 1.0
 
-    };
+    }
 
 }

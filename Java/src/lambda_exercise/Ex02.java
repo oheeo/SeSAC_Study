@@ -6,11 +6,18 @@ interface A2 {
 
 public class Ex02 {
 
-     // A2 a = str -> str.length();
-    A2 a = new A2() {
-        public int abc(String str) {
-            return str.length();
-        }
-     };
+    public static void main(String[] args) {
+
+//        A2 a = str -> str.length();
+//        System.out.println(a.abc("가나다"));  // 3
+
+        A2 a = new A2() {
+            public int abc(String str) {
+                return str.length();
+            }
+        };
+        System.out.println(a.abc("가나다"));  // 3
+
+    }
 
 }

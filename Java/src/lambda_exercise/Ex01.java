@@ -1,5 +1,5 @@
 package lambda_exercise;
-
+// 객체 생성 코드 -> 람다식
 interface A1 {
     void abc(double k);
 }

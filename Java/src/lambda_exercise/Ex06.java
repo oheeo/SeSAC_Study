@@ -16,12 +16,12 @@ public class Ex06 {
         a.abc(3, 5.8);
 
         // 람다식을 객체 생성 코드로 풀어쓰면,
-//        A6 a = new A6() {
-//            public B2 abc(int a, double b) {
-//                return new B2(a, b);
-//            }
-//        };
-//        a.abc(3, 5.8);
+/*        A6 a = new A6() {
+            public B2 abc(int a, double b) {
+                return new B2(a, b);
+            }
+        };
+        a.abc(3, 5.8);   */
 
     }
 

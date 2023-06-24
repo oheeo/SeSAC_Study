@@ -7,12 +7,12 @@ interface A1 {
 public class Ex01 {
 
     public static void main(String[] args) {
-//        A1 a = new A1() {
-//            public void abc(double k) {
-//                System.out.println(k + 0.5);
-//            };
-//        };
-//        a.abc(3.8);  // 4.3
+/*        A1 a = new A1() {
+            public void abc(double k) {
+                System.out.println(k + 0.5);
+            };
+        };
+        a.abc(3.8);  // 4.3   */
 
         A1 a = (double k) -> {System.out.println(k + 0.5);};
         a.abc(3.8);  // 4.3

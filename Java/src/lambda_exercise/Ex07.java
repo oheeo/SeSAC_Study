@@ -16,14 +16,14 @@ public class Ex07 {
         a.abc(b, 3);  // 3
 
         // 람다식을 객체 생성 코드로 풀어보면,
-//        A7 a = new A7() {
-//            public void abc(B3 b, int k) {
-//                b.bcd(k);
-//            }
-//        };
-//        B3 b = new B3();
-//        a.abc(b, 3);  // 3
-//
+/*        A7 a = new A7() {
+            public void abc(B3 b, int k) {
+                b.bcd(k);
+            }
+        };
+        B3 b = new B3();
+        a.abc(b, 3);  // 3   */
+
     }
 
 }

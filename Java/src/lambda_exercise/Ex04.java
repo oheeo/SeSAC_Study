@@ -5,14 +5,14 @@ interface A4 {
 }
 public class Ex04 {
     public static void main(String[] args) {
-//        A4 a = new A4() {
-//            @Override
-//            public int abc(String str) {
-//                return Integer.parseInt(str);
-//            }
-//        };
+/*        A4 a = new A4() {
+            @Override
+            public int abc(String str) {
+                return Integer.parseInt(str);
+            }
+        };
 
-//        A4 a = (str) -> Integer.parseInt(str);
+        A4 a = (str) -> Integer.parseInt(str);   */
 
         A4 a = Integer::parseInt;
 

@@ -33,7 +33,7 @@ public class _05_Overloading {
         study.AA ab = new study.BB();
         ab.print1();
         ab.print2();
-//        ab.print2(3);  오류남
+//        ab.print2(3);  // 오류남
 
     }
 

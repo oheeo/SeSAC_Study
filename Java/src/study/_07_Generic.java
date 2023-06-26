@@ -17,8 +17,8 @@ package study;
     class Test {
         void method1(Goods<A> g) {}  // A 만
         void method2(Goods<?> g) {}  // 전부
-        void method3(Goods<? extends B> g) {}  // B 이하
-        void method4(Goods<? super B> g) {}  // B 이상
+        void method3(Goods<? extends B> g) {}  // B 이하 전부
+        void method4(Goods<? super B> g) {}  // B 이상 전부
     }
 
     public class _07_Generic {

@@ -9,6 +9,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 public class _02_ {
     public static void main(String[] args) {
+
         System.out.print("<<Server>>");
         ServerSocket serverSocket = null;
         try {
@@ -33,5 +34,6 @@ public class _02_ {
             dos.flush();
             } catch (IOException e) {
         }
+
     }
 }

@@ -11,6 +11,7 @@ import java.io.IOException;
 
 public class _01_ {
     public static void main(String[] args) {
+
         System.out.println("<<Client>>");
         try {
             Socket socket = new Socket(InetAddress.getByName("localhost"),
@@ -28,5 +29,6 @@ public class _01_ {
         }
         catch (UnknownHostException e) {}
         catch (IOException e) {e.printStackTrace();}
+
     }
 }

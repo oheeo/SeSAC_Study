@@ -13,13 +13,26 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>List Page</h1>
+    <h1>Todo List</h1>
 
-    <ul>
-        <c:forEach var="dto" items="${list}">
-            <li>${dto}</li>
-        </c:forEach>
-    </ul>
+    <ol>
+        <li><input type="checkbox" name="todolist" value="Java study"> Java study</li>
+        <li><input type="checkbox" name="todolist" value="Eating"> Eating</li>
+        <li><input type="checkbox" name="todolist" value="Read a book"> Read a book</li>
+        <li><input type="checkbox" name="todolist" value="Watch a movie"> Watch a movie</li>
+        <li><input type="checkbox" name="todolist" value="Meet friends"> Meet friends</li>
+        <li><input type="checkbox" name="todolist" value="Buy a pen"> Buy a pen</li>
+    </ol>
+    <br>
+    <p><button type="submit">Add</button></p>
+    <p><button type="button">Modify / Delite</button></p>
+
+<%--    <ul>--%>
+<%--        <c:forEach var="dto" items="${list}">--%>
+<%--            <li>${dto}</li>--%>
+<%--        </c:forEach>--%>
+<%--    </ul>--%>
+
 
 </body>
 </html>

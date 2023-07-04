@@ -22,6 +22,7 @@
         <li><input type="checkbox" name="todolist" value="Watch a movie"> Watch a movie</li>
         <li><input type="checkbox" name="todolist" value="Meet friends"> Meet friends</li>
         <li><input type="checkbox" name="todolist" value="Buy a pen"> Buy a pen</li>
+
     </ol>
     <br>
     <p><button type="submit">Add</button></p>

@@ -12,7 +12,8 @@
 </head>
 <body>
     <form action="/todo/register" method="post">
-        <button type="submit">등록 처리</button>
+        <input type="text" name="addText">
+        <button type="submit">Add</button>
     </form>
 </body>
 </html>

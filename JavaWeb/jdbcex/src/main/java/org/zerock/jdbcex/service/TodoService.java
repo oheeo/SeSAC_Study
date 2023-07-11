@@ -54,7 +54,7 @@ public enum TodoService {
         dao.deleteOne(tno);
     }
 
-    public void modify(TodoDTO todoDTO) throws Exception {
+    public void modify(TodoDTO todoDTO)throws Exception {
         log.info("todoDTO: " + todoDTO );
         TodoVO todoVO = modelMapper.map(todoDTO, TodoVO.class);
         dao.updateOne(todoVO);

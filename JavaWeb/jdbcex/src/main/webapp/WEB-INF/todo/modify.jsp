@@ -8,16 +8,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Todo Modify/Remove</title>
+    <title>Todo Modify/Remove </title>
 </head>
 <body>
 
 <form id="form1" action="/todo/modify" method="post">
     <div>
-        <input type="text" name="tno" value="${dto.tno} readonly">
+        <input type="text" name="tno" value="${dto.tno}" readonly>
     </div>
     <div>
-        <input type="text" name="title" value="${dto.title}">
+        <input type="text" name="title" value="${dto.title}" >
     </div>
     <div>
         <input type="date" name="dueDate" value="${dto.dueDate}">

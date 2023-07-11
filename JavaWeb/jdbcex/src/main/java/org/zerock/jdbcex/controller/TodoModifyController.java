@@ -28,21 +28,22 @@ public class TodoModifyController extends HttpServlet {
             // 데이터 담기
             req.setAttribute("dto", todoDTO);
             req.getRequestDispatcher("/WEB-INF/todo/modify.jsp").forward(req, resp);
-        } catch (Exception e) {
+
+        } catch(Exception e){
             log.error(e.getMessage());
             throw new ServletException("modify get... error");
         }
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp)throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String finishedStr = req.getParameter("finished");
 
         TodoDTO todoDTO = TodoDTO.builder()
                 .tno(Long.parseLong(req.getParameter("tno")))
                 .title(req.getParameter("title"))
                 .dueDate(LocalDate.parse(req.getParameter("dueDate"),DATEFORMATTER ))
-                .finished( finishedStr !=null && finishedStr.equals("on") )
+                .finished( finishedStr !=null && finishedStr.equals("on")  )
                 .build();
 
         log.info("/todo/modify POST...");
@@ -54,6 +55,7 @@ public class TodoModifyController extends HttpServlet {
         }
         resp.sendRedirect("/todo/list");
     }
+    // doPost() : modify.jsp <form> 태그에서 전달된 title, finished 등을 이용해서 TodoDTO 를 구성
 
 
 }

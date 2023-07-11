@@ -105,15 +105,17 @@ public class TodoDAO {
     }  // 삭제 기능
 
     public void updateOne(TodoVO todoVO)throws Exception {
-        String sql = "update tbl_todo det title =?, dueDate = ?, finished = ? where tno =?";
+        String sql = "update tbl_todo set title =?, dueDate = ?, finished = ? where tno =?";
+
         @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
         @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
         preparedStatement.setString(1, todoVO.getTitle());
         preparedStatement.setDate(2, Date.valueOf(todoVO.getDueDate()));
         preparedStatement.setBoolean(3, todoVO.isFinished());
         preparedStatement.setLong(4, todoVO.getTno());
 
         preparedStatement.executeUpdate();
-
-    }
+    }  // 수정 기능
+    
 }

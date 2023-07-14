@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebListener;
 @WebListener
 @Log4j2
 public class W2AppListener implements ServletContextListener {
+    // ServletContextListener : 해당 프로젝트가 실행되자마자 실행됐으면 하는 작업을 위한
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {

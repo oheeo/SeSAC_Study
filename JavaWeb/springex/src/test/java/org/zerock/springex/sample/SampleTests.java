@@ -25,7 +25,7 @@ public class SampleTests {
 
     @Autowired
     // 스프링에서 사용하는 의존성 주입 어노테이션
-    // 해당 타입의 빈(Bean)이 존재하면 여기에 주입해 주기를 원한다는 의미
+    // 해당 타입의 빈(Bean)이 존재하면 이를 테스트 코드 실행시 주입
     // 멤버 변수에 직접 @Autowired를 선언하는 방식을 '필드 주입(Field Injection)'방식
     private SampleService sampleService;
 

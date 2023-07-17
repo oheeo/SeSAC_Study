@@ -15,10 +15,18 @@ import java.sql.Connection;
 
 @Log4j2
 @ExtendWith(SpringExtension.class)
+// JUnit5버전에서 'spring-test'를 이용하기 위한 설정
+
 @ContextConfiguration(locations = "file:src/main/webapp/WEB-INF/root-context.xml")
+// 스프링의 설정 정보를 로딩하기 위해 사용
+// 현재 프로젝트의 경우 XML로 설정돼있기에 location 속성을 이용함 (Java의 경우 classes 속성)
+
 public class SampleTests {
 
-    @Autowired  // 멤버 변수에 직접 @Autowired를 선언하는 방식을 '필드 주입(Field Injection) 방식'이라고 함
+    @Autowired
+    // 스프링에서 사용하는 의존성 주입 어노테이션
+    // 해당 타입의 빈(Bean)이 존재하면 여기에 주입해 주기를 원한다는 의미
+
     private SampleService sampleService;
 
     @Autowired

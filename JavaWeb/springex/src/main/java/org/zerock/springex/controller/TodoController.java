@@ -13,7 +13,7 @@ import org.zerock.springex.dto.TodoDTO;
 @Log4j2
 public class TodoController {
 
-    @RequestMapping("/list")
+    @RequestMapping("/list")  // 특정한 경로의 요청(Request)을 지정하기 위해 사용
     public void list() {
         log.info("todo list......");
     }

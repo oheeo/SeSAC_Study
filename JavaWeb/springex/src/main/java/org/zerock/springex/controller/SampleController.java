@@ -12,10 +12,14 @@ import org.zerock.springex.dto.TodoDTO;
 import java.time.LocalDate;
 
 @Controller
+// 해당 클래스가 스프링 MVC에서 컨트롤러 역할을 한다는 것을 의미하고 
+// 스프링의 빈(Bean)으로 처리되기 위해 사용
 @Log4j2
 public class SampleController {
 
-    @GetMapping("/hello")
+    @GetMapping("/hello")  
+    // @GetMapping : GET 방식으로 들어오는 요청(Request)을 처리하기 위해 사용
+    // '/hello'라는 경로를 호출할 때 동작함
     public void hello() {
         log.info("hello........");
     }

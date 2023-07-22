@@ -73,6 +73,8 @@ public class TodoController {
         log.info("---------------remove----------------");
         log.info("tno: " + tno);
 
+        todoService.remove(tno);
+
         return "redirect:/todo/list";
     }
 

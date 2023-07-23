@@ -93,6 +93,7 @@ public class TodoController {
 
     @PostMapping("/modify")
     public String modify(@Valid TodoDTO todoDTO,
+                         PageRequestDTO pageRequestDTO,
                          BindingResult bindingResult,
                          RedirectAttributes redirectAttributes){
 
@@ -107,8 +108,12 @@ public class TodoController {
 
         todoService.modify(todoDTO);
 
+        redirectAttributes.addAttribute("page", pageRequestDTO.getPage());
+        redirectAttributes.addAttribute("size", pageRequestDTO.getSize());
+
         return "redirect:/todo/list";
     }
+
 
     @GetMapping("/list")
     public void list(@Valid PageRequestDTO pageRequestDTO, BindingResult bindingResult, Model model){

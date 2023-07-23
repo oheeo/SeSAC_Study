@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Oh
-  Date: 2023-07-17
-  Time: 오후 4:33
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -100,7 +93,7 @@
 
     </div>
     <div class="row content">
-
+        <h1>Content</h1>
     </div>
     <div class="row footer">
         <!--<h1>Footer</h1>-->

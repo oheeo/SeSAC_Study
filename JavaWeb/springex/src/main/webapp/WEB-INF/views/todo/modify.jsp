@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Oh
-  Date: 2023-07-22
-  Time: 오후 8:51
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -56,9 +49,6 @@
                     <div class="card-body">
                         <form action="/todo/modify" method="post">
 
-                            <input type="hidden" name="page" value="${pageRequestDTO.page}">
-                            <input type="hidden" name="size" value="${pageRequestDTO.size}">
-
 
 
                             <div class="input-group mb-3">
@@ -76,12 +66,14 @@
                                 <span class="input-group-text">DueDate</span>
                                 <input type="date" name="dueDate" class="form-control"
                                        value=<c:out value="${dto.dueDate}"></c:out> >
+
                             </div>
 
                             <div class="input-group mb-3">
                                 <span class="input-group-text">Writer</span>
                                 <input type="text" name="writer" class="form-control"
                                        value=<c:out value="${dto.writer}"></c:out> readonly>
+
                             </div>
 
                             <div class="form-check">
@@ -116,56 +108,70 @@
                     </div>
                     <script>
 
-                            const formObj = document.querySelector("form")
+                        const formObj = document.querySelector("form")
 
-                            document.querySelector(".btn-danger").addEventListener("click", function(e) {
+                        // document.querySelector(".btn-danger").addEventListener("click",function(e) {
+                        //
+                        //     e.preventDefault()
+                        //     e.stopPropagation()
+                        //
+                        //     formObj.action ="/todo/remove"
+                        //     formObj.method ="post"
+                        //
+                        //     formObj.submit()
+                        //
+                        // },false);
 
-                                e.preventDefault()
-                                e.stopPropagation()
+                        // 삭제 이벤트
+                        document.querySelector(".btn-danger").addEventListener("click",function(e) {
 
-                                formObj.action ="/todo/remove"
-                                formObj.method ="post"
+                            e.preventDefault()
+                            e.stopPropagation()
 
-                                formObj.submit()
+                            formObj.action =`/todo/remove?${pageRequestDTO.link}`
+                            formObj.method ="post"
 
-                            },false);
+                            formObj.submit()
 
-                            document.querySelector(".btn-primary").addEventListener("click",function(e) {
+                        },false);
 
-                                e.preventDefault()
-                                e.stopPropagation()
 
-                                formObj.action ="/todo/modify"
-                                formObj.method ="post"
+                        document.querySelector(".btn-primary").addEventListener("click",function(e) {
 
-                                formObj.submit()
+                            e.preventDefault()
+                            e.stopPropagation()
 
-                            },false);
+                            formObj.action ="/todo/modify"
+                            formObj.method ="post"
 
-                            /*document.querySelector(".btn-secondary").addEventListener("click",function(e) {
+                            formObj.submit()
+
+                        },false);
+
+                        /*document.querySelector(".btn-secondary").addEventListener("click",function(e) {
 
                             e.preventDefault()
                             e.stopPropagation()
 
                             self.location = "/todo/list";
 
-                            },false);*/
+                        },false);*/
 
-                            document.querySelector(".btn-secondary").addEventListener("click",function(e) {
+                        document.querySelector(".btn-secondary").addEventListener("click",function(e) {
 
-                                e.preventDefault()
-                                e.stopPropagation()
+                            e.preventDefault()
+                            e.stopPropagation()
 
-                                self.location= `/todo/list?${pageRequestDTO.link}`
+                            self.location= `/todo/list?${pageRequestDTO.link}`
 
-                            },false);
+                        },false);
 
 
                     </script>
 
-                    </div>
                 </div>
             </div>
+        </div>
 
     </div>
     <div class="row content">

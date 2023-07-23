@@ -26,7 +26,22 @@ public class PageRequestDTO {
     @Positive
     private int size = 10;  // 한 페이지당 개수
 
+    private String link;
+
     public int getSkip() {  // limit에서 사용하는 건너뛰기의 수를 getSkip()을 만들어서 사용
         return (page -1) * 10;
     }
+
+    public String getLink() {
+        if(link == null){
+            StringBuilder builder = new StringBuilder();
+
+            builder.append("page=" + this.page);
+
+            builder.append("&size=" + this.size);
+            link = builder.toString();
+        }
+        return link;
+    }
+
 }

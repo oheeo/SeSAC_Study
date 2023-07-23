@@ -56,6 +56,9 @@
                     <div class="card-body">
                         <form action="/todo/modify" method="post">
 
+                            <input type="hidden" name="page" value="${pageRequestDTO.page}">
+                            <input type="hidden" name="size" value="${pageRequestDTO.size}">
+
 
 
                             <div class="input-group mb-3">
@@ -139,16 +142,26 @@
 
                             },false);
 
-                            document.querySelector(".btn-secondary").addEventListener("click",function(e) {
+                            /*document.querySelector(".btn-secondary").addEventListener("click",function(e) {
 
                             e.preventDefault()
                             e.stopPropagation()
 
                             self.location = "/todo/list";
 
+                            },false);*/
+
+                            document.querySelector(".btn-secondary").addEventListener("click",function(e) {
+
+                                e.preventDefault()
+                                e.stopPropagation()
+
+                                self.location= `/todo/list?${pageRequestDTO.link}`
+
                             },false);
 
-                        </script>
+
+                    </script>
 
                     </div>
                 </div>
